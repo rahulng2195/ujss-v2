@@ -1,0 +1,311 @@
+/* Career Page Styles */
+.career-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.career-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f5f5f5;
+  padding-bottom: 15px;
+}
+
+.career-header h3 {
+  font-size: 22px;
+  margin: 0;
+  color: #1a1a2e;
+}
+
+.job-type {
+  background: #ff6600;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.job-details {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.job-details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #666;
+}
+
+.job-details li i {
+  color: #ff6600;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.career-footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.work-card {
+  text-align: center;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.work-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.work-number span {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Playground Page Styles */
+.playground-demo-area {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 50px;
+  min-height: 600px;
+}
+
+.demo-controls {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.demo-controls h4 {
+  margin-bottom: 15px;
+  color: #1a1a2e;
+}
+
+.demo-chart-placeholder {
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  margin-top: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.chart-container {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+}
+
+.placeholder-text {
+  text-align: center;
+  color: #999;
+}
+
+.placeholder-text i {
+  font-size: 80px;
+  color: #ddd;
+  margin-bottom: 20px;
+}
+
+.demo-form, .demo-result {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.demo-form h4, .demo-result h4 {
+  margin-bottom: 20px;
+  color: #1a1a2e;
+  border-bottom: 2px solid #ff6600;
+  padding-bottom: 10px;
+}
+
+.result-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.result-metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.metric-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.metric-value {
+  color: #ff6600;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.result-recommendation {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-left: 4px solid #ff6600;
+}
+
+.viz-toolbar {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.viz-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.viz-card:hover {
+  transform: translateY(-5px);
+}
+
+.viz-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.workflow-builder {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.workflow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.workflow-step {
+  text-align: center;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  min-width: 150px;
+}
+
+.step-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+}
+
+.step-icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.workflow-arrow {
+  color: #ddd;
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+.workflow-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.workflow-actions .default-btn {
+  margin: 0 10px;
+}
+
+.trend-up {
+  color: #28a745;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-top: 5px;
+}
+
+.trend-down {
+  color: #dc3545;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-top: 5px;
+}
+
+.service-another-card.active {
+  background: #ff6600;
+  color: #fff;
+}
+
+.service-another-card.active h3,
+.service-another-card.active p {
+  color: #fff;
+}
+
+.service-another-card.active .service-icon {
+  background: #fff;
+  color: #ff6600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .workflow-steps {
+    flex-direction: column;
+  }
+  
+  .workflow-arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+  
+  .playground-demo-area {
+    padding: 20px;
+  }
+}
