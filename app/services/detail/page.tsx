@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Service Details - Zinka',
+  title: 'Service Details - UJSS',
   description: 'Learn more about our services',
 };
 
@@ -109,7 +109,7 @@ export default function ServiceDetailPage() {
                     </li>
                     <li>
                       <i className='flaticon-email-1'></i>
-                      <a href="mailto:hello@zinka.com">hello@zinka.com</a>
+                      <a href="mailto:hello@UJSS.com">hello@UJSS.com</a>
                     </li>
                     <li>
                       <i className='flaticon-place'></i>

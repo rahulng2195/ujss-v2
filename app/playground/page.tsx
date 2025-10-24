@@ -2,13 +2,37 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 export default function PlaygroundPage() {
   const [showModal, setShowModal] = useState(false);
   const [selectedAgent, setSelectedAgent] = useState(null);
   const [activeCategory, setActiveCategory] = useState('All');
+
+  // Close modal on escape key press
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && showModal) {
+        closeModal();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, [showModal]);
+
+  // Prevent body scroll when modal is open
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showModal]);
 
   const agents = [
     { 
@@ -73,12 +97,39 @@ export default function PlaygroundPage() {
     setSelectedAgent(null);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      instructions: formData.get('instructions'),
+      agent: selectedAgent.title
+    };
+    
+    // Validate form
+    if (!data.name || !data.email || !data.instructions) {
+      alert('Please fill in all fields');
+      return;
+    }
+    
+    // Add your form submission logic here
+    console.log('Agent deployed:', data);
+    
+    // Show success message
+    alert(`Successfully deployed ${selectedAgent.title}!`);
+    
+    closeModal();
+  };
+
   const filteredAgents = activeCategory === 'All' 
     ? agents 
     : agents.filter(agent => agent.category === activeCategory);
 
   return (
-    <>
+    <div >
       <Navbar />
       
       {/* Page Banner */}
@@ -87,10 +138,10 @@ export default function PlaygroundPage() {
           <div className="inner-title text-center">
             <h1>Hire an AI Agent</h1>
             <p>Automate your business tasks with our army of intelligent AI agents.</p>
-            <ul>
+            <ul >
               <li><Link href="/">Home</Link></li>
-              <li><i className='bx bx-chevron-right'></i></li>
-              <li>Playground</li>
+              <li ><i className='bx bx-chevron-right'></i></li>
+              <li >Playground</li>
             </ul>
           </div>
         </div>
@@ -107,7 +158,7 @@ export default function PlaygroundPage() {
         <div className="container">
           <div className="section-title text-center">
             <span className="sp-before sp-after">Our Agents</span>
-            <h2>Choose an Agent to Get Started</h2>
+            <h2 className='mx-auto w-100'>Choose an Agent to Get Started</h2>
             <p>Select an agent that fits your needs and let it do the hard work for you.</p>
           </div>
 
@@ -150,28 +201,51 @@ export default function PlaygroundPage() {
 
       {/* Hire Agent Modal */}
       {showModal && selectedAgent && (
-        <div className="modal-overlay">
-          <div className="modal-content">
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Hire {selectedAgent.title}</h3>
-              <button className="close-btn" onClick={closeModal}>&times;</button>
+              <button className="close-btn" onClick={closeModal} aria-label="Close modal">
+                &times;
+              </button>
             </div>
             <div className="modal-body">
               <p>You are about to hire the <strong>{selectedAgent.title}</strong>. Please provide your instructions below.</p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="form-group">
-                  <label>Your Name</label>
-                  <input type="text" className="form-control" placeholder="Enter your name" />
+                  <label htmlFor="name">Your Name</label>
+                  <input 
+                    type="text" 
+                    id="name"
+                    name="name" 
+                    className="form-control" 
+                    placeholder="Enter your name" 
+                    required 
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Your Email</label>
-                  <input type="email" className="form-control" placeholder="Enter your email" />
+                  <label htmlFor="email">Your Email</label>
+                  <input 
+                    type="email" 
+                    id="email"
+                    name="email" 
+                    className="form-control" 
+                    placeholder="Enter your email" 
+                    required 
+                  />
                 </div>
                 <div className="form-group">
-                  <label>Instructions for the Agent</label>
-                  <textarea className="form-control" rows="5" placeholder={`e.g., Find 10 potential customers for my software company in the finance industry.`}></textarea>
+                  <label htmlFor="instructions">Instructions for the Agent</label>
+                  <textarea 
+                    id="instructions"
+                    name="instructions" 
+                    className="form-control" 
+                    rows={5} 
+                    placeholder="e.g., Find 10 potential customers for my software company in the finance industry."
+                    required
+                  ></textarea>
                 </div>
-                <button type="button" className="default-btn" onClick={closeModal}>
+                <button type="submit" className="default-btn">
                   Deploy Agent
                   <i className='bx bx-rocket'></i>
                 </button>
@@ -188,6 +262,14 @@ export default function PlaygroundPage() {
         }
         .agent-category-filter .btn {
           margin: 5px;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .col-lg-4,
+        .col-md-6 {
+          display: flex;
         }
         .agent-card {
           background: #fff;
@@ -198,7 +280,11 @@ export default function PlaygroundPage() {
           transition: all 0.3s ease;
           display: flex;
           flex-direction: column;
-          height: 100%;
+          width: 100%;
+        }
+        .theme-dark .agent-card {
+            background: #222;
+            border-color: #444;
         }
         .agent-card:hover {
           transform: translateY(-5px);
@@ -216,12 +302,20 @@ export default function PlaygroundPage() {
           font-size: 20px;
           font-weight: 600;
           margin-top: 15px;
+          margin-bottom: 10px;
         }
         .agent-card-header .badge {
           margin-top: 10px;
         }
         .agent-card-body {
           flex-grow: 1;
+          min-height: 60px;
+          display: flex;
+          align-items: flex-start;
+        }
+        .agent-card-body p {
+          margin-bottom: 0;
+          line-height: 1.6;
         }
         .agent-card-footer {
           text-align: center;
@@ -245,6 +339,8 @@ export default function PlaygroundPage() {
           border-radius: 12px;
           width: 90%;
           max-width: 600px;
+          max-height: 90vh;
+          overflow-y: auto;
         }
         .modal-header {
           display: flex;
@@ -255,16 +351,54 @@ export default function PlaygroundPage() {
         .modal-header h3 {
           font-size: 24px;
           font-weight: 600;
+          margin: 0;
         }
         .close-btn {
           background: none;
           border: none;
-          font-size: 24px;
+          font-size: 32px;
+          cursor: pointer;
+          line-height: 1;
+          padding: 0;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.3s ease;
+        }
+        .close-btn:hover {
+          color: #ff5500;
+        }
+        .form-group {
+          margin-bottom: 20px;
+        }
+        .form-group label {
+          display: block;
+          margin-bottom: 8px;
+          font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 14px;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+          outline: none;
+          border-color: #ff5500;
+        }
+        .default-btn {
+          width: 100%;
+          padding: 12px 20px;
           cursor: pointer;
         }
       `}</style>
 
       <Footer />
-    </>
+    </div>
   );
 }

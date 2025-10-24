@@ -3,8 +3,8 @@ import './globals.css'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
-  title: 'Zinka - IT Agency & SEO Business',
-  description: 'Zinka - Digital AI Startup Support',
+  title: 'Uj Software & solutions',
+  description: 'Ujss - Software & solution',
   icons: {
     icon: '/assets/img/favicon.png',
   },

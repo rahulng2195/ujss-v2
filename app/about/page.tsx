@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Brands from '@/components/Brands';
 
 export const metadata = {
-  title: 'About Us - Zinka',
-  description: 'Learn more about Zinka and our mission',
+  title: 'About Us - UJSS',
+  description: 'Learn more about UJSS and our mission',
 };
 
 export default function AboutPage() {
@@ -605,7 +605,7 @@ export default function AboutPage() {
               <div className="testimonial-slider owl-carousel owl-theme">
                 <div className="testimonial-item">
                   <p>
-                    I chose Zinka because of their value And incredible superior
+                    I chose UJSS because of their value And incredible superior
                     customer Service they really awesome treated me like family
                   </p>
                   <div className="content">
@@ -621,7 +621,7 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-item">
                   <p>
-                    I chose Zinka because of their value And incredible superior
+                    I chose UJSS because of their value And incredible superior
                     customer Service they really awesome treated me like family
                   </p>
                   <div className="content">
@@ -637,7 +637,7 @@ export default function AboutPage() {
                 </div>
                 <div className="testimonial-item">
                   <p>
-                    I chose Zinka because of their value And incredible superior
+                    I chose UJSS because of their value And incredible superior
                     customer Service they really awesome treated me like family
                   </p>
                   <div className="content">

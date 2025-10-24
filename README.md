@@ -1,6 +1,6 @@
-# Zinka Next.js 16 Conversion
+# UJSS Next.js 16 Conversion
 
-This is a conversion of the Zinka Bootstrap HTML template to Next.js 16 (App Router).
+This is a conversion of the UJSS Bootstrap HTML template to Next.js 16 (App Router).
 
 ## Features Converted
 
@@ -17,7 +17,7 @@ This is a conversion of the Zinka Bootstrap HTML template to Next.js 16 (App Rou
 ## Project Structure
 
 ```
-zinka-nextjs/
+UJSS-nextjs/
 ├── app/
 │   ├── layout.tsx          # Root layout with CSS and JS imports
 │   ├── page.tsx            # Main homepage (index-2.html converted)
@@ -45,7 +45,7 @@ zinka-nextjs/
 
 1. **Navigate to the project directory:**
    ```bash
-   cd zinka-nextjs
+   cd UJSS-nextjs
    ```
 
 2. **Install dependencies:**

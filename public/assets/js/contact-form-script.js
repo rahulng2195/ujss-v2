@@ -3,17 +3,19 @@
 /*==============================================================*/
 (function ($) {
     "use strict"; // Start of use strict
-    $("#contactForm").validator().on("submit", function (event) {
-        if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            formError();
-            submitMSG(false, "Did you fill up the form properly?");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            submitForm();
-        }
-    });
+    if ($("#contactForm").length) {
+        $("#contactForm").validator().on("submit", function (event) {
+            if (event.isDefaultPrevented()) {
+                // handle the invalid form...
+                formError();
+                submitMSG(false, "Did you fill up the form properly?");
+            } else {
+                // everything looks good!
+                event.preventDefault();
+                submitForm();
+            }
+        });
+    }
 
 
     function submitForm(){

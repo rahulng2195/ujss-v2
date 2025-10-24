@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contact Us - Zinka',
+  title: 'Contact Us - UJSS',
   description: 'Get in touch with us',
 };
 
