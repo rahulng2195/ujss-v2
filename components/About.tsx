@@ -31,9 +31,11 @@ export default function About() {
                   <h2>Empowering Businesses with Cloud & Tally Excellence</h2>
                 </div>
                 <h3>Your Trusted Technology Partner for Digital Transformation</h3>
-                <p className='pb-1'>At UJ Software & Solutions (UJSS), we go beyond technology — we build smart digital ecosystems for businesses. Our mission is simple: to help organizations scale faster, work smarter, and achieve more with the power of secure cloud infrastructure and expert Tally solutions.</p>
+                <p className='pb-1'>We provide modern cloud solutions designed to boost performance and efficiency.
+                  By combining innovation with reliability, UJSS empowers digital transformation.
+                  Our goal is simple help businesses grow with confi dence</p>
                 <p>We combine innovation, reliability, and 24/7 support to ensure your business runs without limits. Whether you&apos;re a startup chasing growth or an enterprise optimizing efficiency, we are your trusted technology partner.</p>
-                
+
                 <div className="row">
                   {features.map((feature, index) => (
                     <div key={index} className="col-lg-4 col-sm-6 pr-0">
@@ -45,7 +47,7 @@ export default function About() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="about-btn">
                   <Link href="/about" className="learn-btn">
                     Learn More About Us

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function Testimonial() {
@@ -176,27 +177,27 @@ export default function Testimonial() {
             <div className="col-lg-6">
               <div className="testimonial-list">
                 <div className="list-img-1">
-                  <img src="assets/img/testimonial/testimonial1.png" alt="Happy Client" />
+                  <Image src="./assets/img/testimonial/men-avatar.jpg" className="img-fluid" height={70} width={60} alt="Happy Client" />
                 </div>
                 <div className="list-img-2">
-                  <img src="assets/img/testimonial/testimonial2.png" alt="Satisfied Customer" />
+                  <Image src="./assets/img/testimonial/women-avatar.jpg" className="img-fluid" height={70} width={60} alt="Satisfied Customer" />
                 </div>
                 <div className="list-img-3">
-                  <img src="assets/img/testimonial/testimonial3.png" alt="Client Review" />
+                  <Image src="./assets/img/testimonial/men-avatar.jpg" className="img-fluid" height={70} width={60} alt="Client Review" />
                 </div>
                 <div className="list-img-4">
-                  <img src="assets/img/testimonial/testimonial4.png" alt="Customer Testimonial" />
+                  <Image src="./assets/img/testimonial/women-avatar.jpg" className="img-fluid" height={70} width={60} alt="Customer Testimonial" />
                 </div>
                 <div className="list-img-5">
-                  <img src="assets/img/testimonial/testimonial5.png" alt="Client Feedback" />
+                  <Image src="./assets/img/testimonial/men-avatar.jpg" className="img-fluid" height={70} width={60} alt="Client Feedback" />
                 </div>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="testimonial-title">
                 <span className="sp-before sp-after">Our Happy Clients</span>
-                <h2>What Our Clients Say About Us</h2>
-                <p className="mt-3">Real experiences from businesses we've helped grow with our solutions</p>
+                <h2>Trusted The Impact We Create</h2>
+                {/* <p className="mt-3">Real experiences from businesses we've helped grow with our solutions</p> */}
               </div>
               <div className="testimonial-slider owl-carousel owl-theme">
                 {testimonials.map((testimonial, index) => (

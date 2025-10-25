@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Services() {
   const services = [
     {
-      title: 'Tally Solutions',
+      title: 'Smart Tally Operations',
       slug: 'tally-solutions',
       icon: '/assets/img/service/service-icon7.png',
       description: 'Comprehensive Tally software sales, implementation, customization, and expert support services to streamline your accounting and business operations.'

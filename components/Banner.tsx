@@ -11,8 +11,8 @@ export default function Banner() {
           <div className="row align-items-center">
             <div className="col-lg-5">
               <div className="banner-content-two">
-                <span>Empowering Your Business</span>
-                <h1>Empowering Businesses with <b>Cloud & Tally</b> Excellence</h1>
+                {/* <span>Empowering Your Business</span> */}
+                <h1>Your Partner in Next-Gen <b>Cloud & Tally</b> Transformation</h1>
                 <p>At UJ Software & Solutions, we build smart digital ecosystems that help organizations scale faster, work smarter, and achieve more with secure cloud infrastructure and expert Tally solutions.</p>
                 <div className="banner-content-btn">
                   <Link href="/services" className="learn-btn">
