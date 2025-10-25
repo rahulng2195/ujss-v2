@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ServiceCard from '@/components/ServiceCard';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -98,7 +99,7 @@ export default function ServicesPage() {
       icon: 'flaticon-money',
       bgClass: 'service-icon-bg4',
       title: 'Pay Per Click (PPC) Services',
-      slug: 'ppc-services',
+      slug: 'ppc-advertising',
       description: 'Targeted PPC campaigns on Google Ads, Facebook, and other platforms to drive quality traffic and conversions.'
     }
   ];
@@ -201,17 +202,7 @@ export default function ServicesPage() {
           <div className="row pt-45">
             {products.map((product, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div className="service-another-card">
-                  <Link href={`/services/${product.slug}`}>
-                    <i className={`${product.icon} service-icon ${product.bgClass}`}></i>
-                  </Link>
-                  <h3><Link href={`/services/${product.slug}`}>{product.title}</Link></h3>
-                  <p>{product.description}</p>
-                  <Link href={`/services/${product.slug}`} className="learn-btn">
-                    Learn more 
-                    <i className='bx bx-plus'></i>
-                  </Link>
-                </div>
+                <ServiceCard {...product} />
               </div>
             ))}
           </div>
@@ -235,17 +226,7 @@ export default function ServicesPage() {
           <div className="row pt-45 justify-content-center">
             {services.map((service, index) => (
               <div key={index} className="col-lg-4 col-md-6">
-                <div className="service-another-card">
-                  <Link href={`/services/${service.slug}`}>
-                    <i className={`${service.icon} service-icon ${service.bgClass}`}></i>
-                  </Link>
-                  <h3><Link href={`/services/${service.slug}`}>{service.title}</Link></h3>
-                  <p>{service.description}</p>
-                  <Link href={`/services/${service.slug}`} className="learn-btn">
-                    Learn more 
-                    <i className='bx bx-plus'></i>
-                  </Link>
-                </div>
+                <ServiceCard {...service} />
               </div>
             ))}
           </div>
@@ -269,17 +250,7 @@ export default function ServicesPage() {
           <div className="row pt-45">
             {digitalMarketing.map((service, index) => (
               <div key={index} className="col-lg-3 col-md-6">
-                <div className="service-another-card">
-                  <Link href={`/services/${service.slug}`}>
-                    <i className={`${service.icon} service-icon ${service.bgClass}`}></i>
-                  </Link>
-                  <h3><Link href={`/services/${service.slug}`}>{service.title}</Link></h3>
-                  <p>{service.description}</p>
-                  <Link href={`/services/${service.slug}`} className="learn-btn">
-                    Learn more 
-                    <i className='bx bx-plus'></i>
-                  </Link>
-                </div>
+                <ServiceCard {...service} />
               </div>
             ))}
           </div>
@@ -303,17 +274,7 @@ export default function ServicesPage() {
           <div className="row pt-45">
             {dscLegalServices.map((service, index) => (
               <div key={index} className="col-lg-3 col-md-6">
-                <div className="service-another-card">
-                  <Link href={`/services/${service.slug}`}>
-                    <i className={`${service.icon} service-icon ${service.bgClass}`}></i>
-                  </Link>
-                  <h3><Link href={`/services/${service.slug}`}>{service.title}</Link></h3>
-                  <p>{service.description}</p>
-                  <Link href={`/services/${service.slug}`} className="learn-btn">
-                    Learn more 
-                    <i className='bx bx-plus'></i>
-                  </Link>
-                </div>
+                <ServiceCard {...service} />
               </div>
             ))}
           </div>
@@ -332,17 +293,7 @@ export default function ServicesPage() {
           <div className="row pt-45">
             {businessApplications.map((service, index) => (
               <div key={index} className="col-lg-3 col-md-6">
-                <div className="service-another-card">
-                  <Link href={`/services/${service.slug}`}>
-                    <i className={`${service.icon} service-icon ${service.bgClass}`}></i>
-                  </Link>
-                  <h3><Link href={`/services/${service.slug}`}>{service.title}</Link></h3>
-                  <p>{service.description}</p>
-                  <Link href={`/services/${service.slug}`} className="learn-btn">
-                    Learn more 
-                    <i className='bx bx-plus'></i>
-                  </Link>
-                </div>
+                <ServiceCard {...service} />
               </div>
             ))}
           </div>

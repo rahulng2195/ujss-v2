@@ -1,0 +1,94 @@
+/* Service Card Button Styles */
+
+.service-card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.service-card-buttons .learn-btn,
+.service-card-buttons .inquiry-btn {
+  flex: 1;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.service-card-buttons .learn-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border: 2px solid transparent;
+}
+
+.service-card-buttons .learn-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.service-card-buttons .inquiry-btn {
+  background: linear-gradient(135deg, #ff5500 0%, #ff7700 100%);
+  color: #fff;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card-buttons .inquiry-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.service-card-buttons .inquiry-btn:hover::before {
+  left: 100%;
+}
+
+.service-card-buttons .inquiry-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 85, 0, 0.4);
+}
+
+.service-card-buttons .inquiry-btn i {
+  font-size: 18px;
+}
+
+.service-card-buttons .learn-btn i {
+  font-size: 18px;
+}
+
+/* Dark Mode Support */
+.dark-theme .service-card-buttons .learn-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.dark-theme .service-card-buttons .inquiry-btn {
+  background: linear-gradient(135deg, #ff5500 0%, #ff7700 100%);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .service-card-buttons {
+    flex-direction: column;
+  }
+
+  .service-card-buttons .learn-btn,
+  .service-card-buttons .inquiry-btn {
+    width: 100%;
+    min-width: unset;
+  }
+}

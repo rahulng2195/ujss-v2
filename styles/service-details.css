@@ -489,8 +489,7 @@
 /* Responsive Styles */
 @media (max-width: 991px) {
   .service-details-sidebar {
-    margin-top: 50px;
-    position: static;
+    display: none; /* Hide sidebar on mobile */
   }
 
   .service-article-content {
@@ -552,6 +551,116 @@
     flex-direction: column;
     gap: 15px;
   }
+}
+
+/* Dark Mode Styles */
+.dark-theme .service-article {
+  background: #1a1a1a;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .service-article-content h2,
+.dark-theme .service-article-content h3 {
+  color: #fff;
+}
+
+.dark-theme .service-article-content p {
+  color: #b0b0b0;
+}
+
+.dark-theme .service-article-content strong {
+  color: #e0e0e0;
+}
+
+.dark-theme .service-feature-card {
+  background: #252525;
+  border-color: #333;
+}
+
+.dark-theme .service-feature-card:hover {
+  background: #2a2a2a;
+  border-color: #667eea;
+}
+
+.dark-theme .service-feature-card h4 {
+  color: #fff;
+}
+
+.dark-theme .service-feature-card p {
+  color: #b0b0b0;
+}
+
+.dark-theme .service-process-step-content h4 {
+  color: #fff;
+}
+
+.dark-theme .service-process-step-content p {
+  color: #b0b0b0;
+}
+
+.dark-theme .service-details-sidebar > div {
+  background: #1a1a1a;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .service-details-sidebar h3 {
+  color: #fff;
+}
+
+.dark-theme .services-list ul li a {
+  background: #252525;
+  color: #e0e0e0;
+}
+
+.dark-theme .services-list ul li a:hover {
+  background: #2a2a2a;
+  color: #667eea;
+}
+
+.dark-theme .service-contact-widget .contact-info {
+  background: #252525;
+}
+
+.dark-theme .service-contact-widget .contact-info:hover {
+  background: #2a2a2a;
+}
+
+.dark-theme .service-contact-widget .contact-info h4 {
+  color: #fff;
+}
+
+.dark-theme .service-contact-widget .contact-info p {
+  color: #b0b0b0;
+}
+
+.dark-theme .service-download-widget .download-btn {
+  background: #252525;
+  color: #e0e0e0;
+}
+
+.dark-theme .service-download-widget .download-btn:hover {
+  background: #2a2a2a;
+}
+
+.dark-theme .service-icon-list-item {
+  background: #252525;
+}
+
+.dark-theme .service-icon-list-item:hover {
+  background: #2a2a2a;
+}
+
+.dark-theme .service-icon-list-item span {
+  color: #e0e0e0;
+}
+
+/* Dark mode for service details area background */
+.dark-theme .service-details-area {
+  background-color: #0f0f0f !important;
+}
+
+.dark-theme .service-article-img {
+  border: 1px solid #333;
 }
 
 /* Animation */

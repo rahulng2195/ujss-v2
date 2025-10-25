@@ -1,14 +1,16 @@
+'use client';
+
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CareerModal from '@/components/CareerModal';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const metadata = {
-  title: 'Careers - UJSS',
-  description: 'Join our team and grow your career with UJSS',
-};
-
 export default function CareerPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedJob, setSelectedJob] = useState('');
+
   const jobOpenings = [
     {
       id: 1,
@@ -43,6 +45,11 @@ export default function CareerPage() {
       experience: '1-2 years',
     },
   ];
+
+  const handleApplyClick = (jobTitle: string) => {
+    setSelectedJob(jobTitle);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -139,10 +146,14 @@ export default function CareerPage() {
                     </ul>
                   </div>
                   <div className="career-footer">
-                    <Link href={`/career/${job.id}`} className="default-btn">
+                    <button 
+                      onClick={() => handleApplyClick(job.title)}
+                      className="default-btn"
+                      style={{ cursor: 'pointer' }}
+                    >
                       Apply Now
                       <i className='bx bx-plus'></i>
-                    </Link>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -216,16 +227,29 @@ export default function CareerPage() {
               </div>
               <div className="col-lg-5">
                 <div className="newsletter-btn">
-                  <Link href="/contact" className="default-btn">
+                  <button 
+                    onClick={() => {
+                      setSelectedJob('');
+                      setIsModalOpen(true);
+                    }}
+                    className="default-btn"
+                    style={{ cursor: 'pointer' }}
+                  >
                     Send Your Resume
                     <i className='bx bx-plus'></i>
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <CareerModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)}
+        jobTitle={selectedJob}
+      />
 
       <Footer />
     </>

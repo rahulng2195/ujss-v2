@@ -30,6 +30,9 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/css/responsive.css" />
         <link rel="stylesheet" href="/assets/css/theme-dark.css" />
         <link rel="stylesheet" href="/assets/css/custom-pages.css" />
+        <link rel="stylesheet" href="/styles/modal.css" />
+        <link rel="stylesheet" href="/styles/service-card.css" />
+        <link rel="stylesheet" href="/styles/service-details.css" />
       </head>
       <body>
         {children}
