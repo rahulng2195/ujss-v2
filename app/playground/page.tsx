@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 export default function PlaygroundPage() {
   const [showModal, setShowModal] = useState(false);
-  const [selectedAgent, setSelectedAgent] = useState(null);
+  const [selectedAgent, setSelectedAgent] = useState<Agent | null>(null);
   const [activeCategory, setActiveCategory] = useState('All');
 
   // Close modal on escape key press
   useEffect(() => {
-    const handleEscape = (e) => {
+    const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && showModal) {
         closeModal();
       }
@@ -34,7 +34,14 @@ export default function PlaygroundPage() {
     };
   }, [showModal]);
 
-  const agents = [
+  type Agent = {
+    title: string;
+    category: string;
+    description: string;
+    icon: string;
+  };
+
+  const agents: Agent[] = [
     { 
       title: 'Lead Qualification Agent', 
       category: 'Sales', 
@@ -87,7 +94,7 @@ export default function PlaygroundPage() {
 
   const categories = ['All', 'Sales', 'Support', 'Productivity', 'Analytics', 'Marketing'];
 
-  const handleHire = (agent) => {
+  const handleHire = (agent: Agent) => {
     setSelectedAgent(agent);
     setShowModal(true);
   };
@@ -97,11 +104,18 @@ export default function PlaygroundPage() {
     setSelectedAgent(null);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!selectedAgent) {
+      // This should not happen, but it's a good practice to handle it
+      console.error("No agent selected");
+      closeModal();
+      return;
+    }
     
     // Get form data
-    const formData = new FormData(e.target);
+    const formData = new FormData(e.target as HTMLFormElement);
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
@@ -202,7 +216,7 @@ export default function PlaygroundPage() {
       {/* Hire Agent Modal */}
       {showModal && selectedAgent && (
         <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-content" onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}>
             <div className="modal-header">
               <h3>Hire {selectedAgent.title}</h3>
               <button className="close-btn" onClick={closeModal} aria-label="Close modal">
