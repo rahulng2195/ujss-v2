@@ -1,8 +1,10 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ServiceSidebar from '@/components/ServiceSidebar';
+import AutoplayVideo from '@/components/AutoplayVideo';
 import Link from 'next/link';
 import '../../../styles/service-details.css';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Payroll & HRMS Solutions | Automated Payroll & HR Management - UJSS',
@@ -13,46 +15,42 @@ export const metadata = {
 export default function PayrollHrmsPage() {
   const benefits = [
     {
-      icon: 'bx-calculator',
+      icon: '/assets/img/service/automated.png',
       title: 'Automated Payroll Processing',
       description: 'Automate your payroll calculations, including salaries, deductions, and taxes, to save time and reduce errors.'
     },
     {
-      icon: 'bx-user-check',
+      icon: '/assets/img/service/centralize.png',
       title: 'Centralized Employee Management',
       description: 'Manage all your employee data in one place, from onboarding to exit, with a centralized and secure HRMS.'
     },
     {
-      icon: 'bx-calendar',
+      icon: '/assets/img/service/attandance.png',
       title: 'Attendance & Leave Management',
       description: 'Track employee attendance, manage leave requests, and automate leave calculations with our integrated system.'
     },
     {
-      icon: 'bx-file',
+      icon: '/assets/img/service/statutory.png',
       title: 'Statutory Compliance',
       description: 'Stay compliant with all the latest labor laws and regulations, including PF, ESI, and PT, with our automated compliance features.'
     },
     {
-      icon: 'bx-line-chart',
+      icon: '/assets/img/service/insight.png',
       title: 'Insightful Reports & Analytics',
       description: 'Generate a wide range of HR and payroll reports to get valuable insights into your workforce and make data-driven decisions.'
     },
     {
-      icon: 'bx-mobile-alt',
+      icon: '/assets/img/service/employee.png',
       title: 'Employee Self-Service Portal',
       description: 'Empower your employees with a self-service portal to view their payslips, apply for leave, and manage their personal information.'
     }
   ];
 
   const features = [
-    'Automated payroll processing',
-    'Attendance and leave management',
-    'Employee self-service portal',
-    'Statutory compliance (PF, ESI, PT)',
-    'Recruitment and onboarding',
-    'Performance management',
-    'Expense management',
-    'Mobile app for employees and managers'
+    'Smart Attendance Monitoring',
+    'Effortless Payroll Automation',
+    'Quick & Secure Payments',
+    'Real-Time Alerts'
   ];
 
   return (
@@ -85,19 +83,26 @@ export default function PayrollHrmsPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/payroll-hrms.jpg" alt="Payroll & HRMS" />
-                </div>
+                </div> */}
                 
-                <div className="service-article-content">
-                  <h2>Streamline Your HR and Payroll Processes with Our Integrated Solutions</h2>
-                  <p>Managing human resources and payroll can be a complex and time-consuming task. Our integrated Payroll & HRMS solutions are designed to simplify and automate these processes, allowing you to manage your workforce more efficiently and effectively.</p>
-                  
-                  <p>From attendance and leave management to payroll processing and compliance, our solution provides a single platform to manage all your HR and payroll needs. It helps you save time, reduce errors, and stay compliant with the latest laws and regulations.</p>
+                <div className="row align-items-center mb-5 mx-2">
+                  <div className="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <h2>Streamline Your HR and Payroll Processes with Our Integrated Solutions</h2>
+                    <p>Managing human resources and payroll can be a complex and time-consuming task. Our integrated Payroll & HRMS solutions are designed to simplify and automate these processes, allowing you to manage your workforce more efficiently and effectively.</p>
 
-                  <div className="service-article-another mt-5">
+                    <p>From attendance and leave management to payroll processing and compliance, our solution provides a single platform to manage all your HR and payroll needs. It helps you save time, reduce errors, and stay compliant with the latest laws and regulations.</p>
+                  </div>
+                  <div className="col-lg-6 col-md-12">
+                    <AutoplayVideo src="/assets/in-lens.mp4" />
+                  </div>
+                </div>
+
+                <div className="service-article-content mt-4">
+                  <div className="service-article-another">
                     <h3>The Advantages of Our Payroll & HRMS Solutions</h3>
                     <p>Discover the benefits of our integrated HR and payroll software:</p>
                   </div>
@@ -106,7 +111,7 @@ export default function PayrollHrmsPage() {
                     {benefits.map((benefit, index) => (
                       <div key={index} className="col-lg-6 col-md-6 mb-4">
                         <div className="service-feature-card">
-                          <i className={`bx ${benefit.icon}`}></i>
+                          <Image src={benefit.icon} alt={benefit.title} width={50} height={50} />
                           <h4>{benefit.title}</h4>
                           <p>{benefit.description}</p>
                         </div>
@@ -145,9 +150,9 @@ export default function PayrollHrmsPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

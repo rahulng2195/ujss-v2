@@ -79,12 +79,12 @@ export default function StartupRegistrationPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/startup-registration.jpg" alt="Startup Registration" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Turn Your Idea into a Reality with Our Startup Registration Services</h2>
                   <p>Have a brilliant idea? We are here to help you turn it into a successful business. Our startup registration services are designed to provide you with end-to-end support, from choosing the right legal structure for your business to ensuring all the necessary registrations and compliances are in place.</p>
@@ -141,9 +141,9 @@ export default function StartupRegistrationPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

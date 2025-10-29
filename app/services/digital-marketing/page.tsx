@@ -79,12 +79,12 @@ export default function DigitalMarketingPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/service-details.jpg" alt="Digital Marketing" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Grow Your Business with Strategic Digital Marketing</h2>
                   <p>In today&apos;s digital-first world, having a strong online presence is crucial for business success. At UJSS, we provide comprehensive digital marketing services that help businesses of all sizes reach their target audience, generate quality leads, and achieve measurable growth. Our data-driven approach ensures every marketing dollar you spend delivers maximum return on investment.</p>
@@ -174,40 +174,6 @@ export default function DigitalMarketingPage() {
                     <i className='bx bxs-quote-left'></i>
                     <p>Let us help you dominate your market online. Our proven digital marketing strategies will help you reach more customers and grow your revenue.</p>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="service-details-sidebar">
-                <div className="services-list">
-                  <h3>All Services</h3>
-                  <ul>
-                    <li><Link href="/services/tally-solutions">Tally Solutions <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/tally-on-cloud">Tally on Cloud <i className='bx bx-chevron-right'></i></Link></li>
-                    <li className="active"><Link href="/services/digital-marketing">Digital Marketing <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/ai-agents">AI Agents <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/business-consulting">Business Consulting <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/cloud-computing">Cloud Computing <i className='bx bx-chevron-right'></i></Link></li>
-                  </ul>
-                </div>
-
-                <div className="service-contact-widget">
-                  <h3>Need Help?</h3>
-                  <div className="contact-info">
-                    <i className='bx bx-phone'></i>
-                    <h4>Call Us</h4>
-                    <p>+91-XXXXX-XXXXX</p>
-                  </div>
-                  <div className="contact-info">
-                    <i className='bx bx-envelope'></i>
-                    <h4>Email Us</h4>
-                    <p>info@ujss.in</p>
-                  </div>
-                  <Link href="/contact" className="default-btn">
-                    Get A Quote
-                    <i className='bx bx-plus'></i>
-                  </Link>
                 </div>
               </div>
             </div>

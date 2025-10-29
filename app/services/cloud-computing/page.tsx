@@ -31,11 +31,11 @@ export default function CloudComputingPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/service-details.jpg" alt="Cloud Computing" />
-                </div>
+                </div> */}
                 
                 <div className="service-article-content">
                   <h2>Enterprise Cloud Solutions</h2>
@@ -76,40 +76,6 @@ export default function CloudComputingPage() {
                     <i className='bx bxs-quote-left'></i>
                     <p>Embrace the power of cloud computing to reduce costs, improve agility, and accelerate innovation.</p>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4">
-              <div className="service-details-sidebar">
-                <div className="services-list">
-                  <h3>All Services</h3>
-                  <ul>
-                    <li><Link href="/services/tally-solutions">Tally Solutions <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/tally-on-cloud">Tally on Cloud <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/digital-marketing">Digital Marketing <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/ai-agents">AI Agents <i className='bx bx-chevron-right'></i></Link></li>
-                    <li><Link href="/services/business-consulting">Business Consulting <i className='bx bx-chevron-right'></i></Link></li>
-                    <li className="active"><Link href="/services/cloud-computing">Cloud Computing <i className='bx bx-chevron-right'></i></Link></li>
-                  </ul>
-                </div>
-
-                <div className="service-contact-widget">
-                  <h3>Need Help?</h3>
-                  <div className="contact-info">
-                    <i className='bx bx-phone'></i>
-                    <h4>Call Us</h4>
-                    <p>+91-XXXXX-XXXXX</p>
-                  </div>
-                  <div className="contact-info">
-                    <i className='bx bx-envelope'></i>
-                    <h4>Email Us</h4>
-                    <p>info@ujss.in</p>
-                  </div>
-                  <Link href="/contact" className="default-btn">
-                    Get A Quote
-                    <i className='bx bx-plus'></i>
-                  </Link>
                 </div>
               </div>
             </div>

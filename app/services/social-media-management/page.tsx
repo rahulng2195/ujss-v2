@@ -93,12 +93,12 @@ export default function SocialMediaManagementPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/social-media-management.jpg" alt="Social Media Management" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Build Your Brand. Engage Your Audience. Grow Your Business.</h2>
                   <p>Your social media is the voice of your brand — and we make sure it's heard loud and clear! At UJSS Services, we help businesses create a powerful online presence through engaging content, smart strategy, and consistent growth.</p>
@@ -258,9 +258,9 @@ export default function SocialMediaManagementPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

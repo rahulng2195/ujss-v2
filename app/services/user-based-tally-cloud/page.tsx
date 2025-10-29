@@ -85,11 +85,11 @@ export default function UserBasedTallyCloudPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
-                  <img src="/assets/img/service/user-based-cloud.jpg" alt="User Based Tally on Cloud" />
-                </div>
+                {/* <div className="service-article-img">
+                  <img src="/assets/img/service/user-based-cloud.png" alt="User Based Tally on Cloud" />
+                </div> */}
                 
                 <div className="service-article-content">
                   <h2>Flexible and Scalable Tally on Cloud with User-Based Pricing</h2>
@@ -145,9 +145,9 @@ export default function UserBasedTallyCloudPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

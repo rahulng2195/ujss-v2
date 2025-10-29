@@ -85,12 +85,12 @@ export default function MiracleSoftwarePage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/miracle-software.jpg" alt="Miracle Accounting Software" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Simple, Powerful, and Affordable Accounting Software for Your Business</h2>
                   <p>Miracle Accounting Software is a comprehensive solution designed specifically for small and medium businesses. It is simple to use, yet powerful enough to handle all your accounting, inventory, and billing needs. With Miracle, you can manage your business finances with ease and confidence.</p>
@@ -145,9 +145,9 @@ export default function MiracleSoftwarePage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

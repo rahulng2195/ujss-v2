@@ -16,7 +16,7 @@ export default function ProcessFlow() {
                 <ul>
                   <li className="text-right">
                     <h3>
-                      Discovery & Strategy <span>1</span>
+                      <span>1</span> Discovery & Strategy 
                     </h3>
                     <p>
                       We begin by understanding your business, goals, and challenges to develop a comprehensive strategy.
@@ -24,7 +24,7 @@ export default function ProcessFlow() {
                   </li>
                   <li className="text-right">
                     <h3>
-                      Design & Development <span>2</span>
+                     <span>2</span> Design & Development 
                     </h3>
                     <p>
                       Our team designs and develops custom solutions tailored to your specific needs and requirements.
@@ -32,7 +32,7 @@ export default function ProcessFlow() {
                   </li>
                   <li className="text-right">
                     <h3>
-                      Testing & Quality Assurance <span>3</span>
+                     <span>3</span> Testing & Quality Assurance 
                     </h3>
                     <p>
                       We conduct rigorous testing to ensure your solution is robust, reliable, and ready for deployment.
@@ -51,7 +51,7 @@ export default function ProcessFlow() {
                 <ul>
                   <li>
                     <h3>
-                      <span>4</span>Deployment & Integration
+                      <span>4</span> Deployment & Integration
                     </h3>
                     <p>
                       We deploy your solution and integrate it seamlessly with your existing systems and workflows.

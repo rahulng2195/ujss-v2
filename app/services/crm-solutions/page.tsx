@@ -126,12 +126,12 @@ export default function CRMSolutionsPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/crm-solutions.jpg" alt="CRM Solutions" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Transform Your Customer Relationships</h2>
                   <p>A powerful CRM system is the backbone of successful customer relationships. At UJSS, we provide comprehensive CRM solutions that help you manage leads, close deals faster, deliver exceptional support, and build lasting customer relationships.</p>
@@ -361,9 +361,9 @@ export default function CRMSolutionsPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

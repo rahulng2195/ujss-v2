@@ -117,12 +117,12 @@ export default function WebsiteAppDevelopmentPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/web-app-development.jpg" alt="Website and App Development" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Build Your Digital Presence with UJSS</h2>
                   <p>Your website and app are more than just online tools — they're your brand's identity. At UJSS Services, we create stunning, high-performing websites and mobile apps that help you attract customers, grow faster, and stand out in the digital world.</p>
@@ -261,9 +261,9 @@ export default function WebsiteAppDevelopmentPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

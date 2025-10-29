@@ -93,12 +93,12 @@ export default function TallyDataSyncPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/tally-data-sync.jpg" alt="Tally Data Synchronization" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Seamlessly Synchronize Your Tally Data Across All Locations</h2>
                   <p>In a distributed business environment, maintaining data consistency and accuracy across multiple locations is a major challenge. Our Tally Data Synchronization solution is designed to address this challenge by providing seamless, real-time data synchronization between multiple Tally installations.</p>
@@ -155,9 +155,9 @@ export default function TallyDataSyncPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

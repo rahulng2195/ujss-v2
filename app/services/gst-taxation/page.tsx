@@ -91,12 +91,12 @@ export default function GstTaxationPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/gst-taxation.jpg" alt="GST & Taxation" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Navigate the Complexities of GST and Taxation with Our Expert Services</h2>
                   <p>The Indian tax system can be complex and challenging to navigate. Our team of tax experts is here to simplify it for you. We provide comprehensive GST and taxation services to help you stay compliant, save taxes, and grow your business.</p>
@@ -153,9 +153,9 @@ export default function GstTaxationPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

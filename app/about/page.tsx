@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Brands from '@/components/Brands';
 import Testimonial from '@/components/Testimonial';
+import ProcessFlow from '@/components/ProcessFlow';
 
 export const metadata = {
   title: 'About Us - UJSS',
@@ -19,7 +20,7 @@ export default function AboutPage() {
         <div className="container">
           <div className="inner-title text-center">
             <h3>About Us</h3>
-            <p>Success Grows When We Collaborate.</p>
+            {/* <p>Success Grows When We Collaborate.</p> */}
             <ul>
               <li><a href="/">Home</a></li>
               <li><i className='bx bx-chevron-right'></i></li>
@@ -53,9 +54,9 @@ export default function AboutPage() {
                 <h3>
                   We are a team of passionate experts dedicated to helping businesses thrive in the digital age. Our strategy is built on a foundation of innovation, collaboration, and a deep understanding of our clients' needs.
                 </h3>
-                <p>
+                {/* <p>
                   At UJSS, we provide cutting-edge solutions in cloud computing, custom software development, data security, and digital marketing. We believe in building strong partnerships with our clients, working together to achieve their goals and drive growth.
-                </p>
+                </p> */}
                 <div className="about-widget-list">
                   <ul>
                     <li>
@@ -101,75 +102,7 @@ export default function AboutPage() {
       {/* Counter Area End */}
 
        {/* History Area */}
-      <div className="history-area pt-100 pb-70">
-        <div className="container">
-          <div className="section-title text-center">
-            <span className="sp-before sp-after">Our History</span>
-            <h2>The Facts About Our Company</h2>
-          </div>
-          <div className="history-list">
-            <ul>
-              <li>
-                <i className="bx bx-check" />
-                <div className="content">
-                  <h3>2010</h3>
-                  <span>February 20th</span>
-                </div>
-              </li>
-              <li>
-                <i className="bx bx-check" />
-                <div className="content">
-                  <h3>2012</h3>
-                  <span>January 14th</span>
-                </div>
-              </li>
-              <li>
-                <i className="bx bx-check" />
-                <div className="content">
-                  <h3>2016</h3>
-                  <span>March 25th</span>
-                </div>
-              </li>
-              <li>
-                <i className="bx bx-check" />
-                <div className="content">
-                  <h3>2018</h3>
-                  <span>December 10th</span>
-                </div>
-              </li>
-              <li>
-                <i className="bx bx-check" />
-                <div className="content">
-                  <h3>2019</h3>
-                  <span>February 01th</span>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="history-content">
-                <h2>A Legacy of Innovation and Growth</h2>
-                <p>
-                  Since our inception, UJSS has been on a mission to help businesses leverage the power of technology. We have continuously evolved and expanded our services to meet the changing needs of our clients and the market.
-                </p>
-                <p>
-                  Our journey has been marked by a commitment to excellence, a passion for innovation, and a dedication to our clients' success. We are proud of our history and excited about the future as we continue to push the boundaries of what's possible.
-                </p>
-                <a href="/services" className="default-btn">
-                  Learn more
-                  <i className="bx bx-plus" />
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="history-img">
-                <img src="assets/img/history-img.png" alt="Images" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       {/* History Area End */}
 
       {/* Our Journey List Area */}
@@ -263,318 +196,9 @@ export default function AboutPage() {
       </div>
       {/* Service List Area End */}
       {/* Work Area Two */}
-      <div className="work-area-two pt-100 pb-70">
-        <div className="container">
-          <div className="section-title text-center">
-            <span className="sp-before sp-after">Working Process</span>
-            <h2 className="h2-color2">Simple &amp; Clean Work Process</h2>
-          </div>
-          <div className="row pt-45">
-            <div className="col-lg-4">
-              <div className="work-item-list">
-                <ul>
-                  <li className="text-right">
-                    <h3>
-                      Discovery & Strategy <span>1</span>
-                    </h3>
-                    <p>
-                      We begin by understanding your business, goals, and challenges to develop a comprehensive strategy.
-                    </p>
-                  </li>
-                  <li className="text-right">
-                    <h3>
-                      Design & Development <span>2</span>
-                    </h3>
-                    <p>
-                      Our team designs and develops custom solutions tailored to your specific needs and requirements.
-                    </p>
-                  </li>
-                  <li className="text-right">
-                    <h3>
-                      Testing & Quality Assurance <span>3</span>
-                    </h3>
-                    <p>
-                      We conduct rigorous testing to ensure your solution is robust, reliable, and ready for deployment.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="work-img-2">
-                <img src="assets/img/work-img.png" alt="Images" />
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="work-item-list-2">
-                <ul>
-                  <li>
-                    <h3>
-                      <span>4</span>Deployment & Integration
-                    </h3>
-                    <p>
-                      We deploy your solution and integrate it seamlessly with your existing systems and workflows.
-                    </p>
-                  </li>
-                  <li>
-                    <h3>
-                      <span>5</span>Training & Support
-                    </h3>
-                    <p>
-                      We provide comprehensive training and ongoing support to ensure a smooth transition and continued success.
-                    </p>
-                  </li>
-                  <li>
-                    <h3>
-                      <span>6</span>Optimization & Growth
-                    </h3>
-                    <p>
-                      We continuously monitor, analyze, and optimize your solution to drive growth and achieve your business objectives.
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProcessFlow />
       {/* Work Area Two End */}
      
-      {/* Team Area Two */}
-      <div className="team-area-two pb-70">
-        <div className="container">
-          <div className="section-title text-center">
-            <span className="sp-before sp-after">Team</span>
-            <h2 className="h2-color2">
-              Meet Our Data Scientist to Grow Your Business
-            </h2>
-          </div>
-          <div className="team-slider-two owl-carousel owl-theme">
-            <div className="team-card active">
-              <a href="#">
-                <img src="assets/img/team/team-img7.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Cristiono Kopper</a>
-                </h3>
-                <span>Web Developer</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="team-card team-rotated">
-              <a href="#">
-                <img src="assets/img/team/team-img8.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Jermin Jekson</a>
-                </h3>
-                <span>Marketing Manager</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="team-card">
-              <a href="#">
-                <img src="assets/img/team/team-img9.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Hobler Jeain</a>
-                </h3>
-                <span>General Manager</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="team-card team-rotated-2">
-              <a href="#">
-                <img src="assets/img/team/team-img10.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Julfiker Jeain</a>
-                </h3>
-                <span>CEO At Ostino</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="team-card active">
-              <a href="#">
-                <img src="assets/img/team/team-img11.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Hobler Jeain</a>
-                </h3>
-                <span>General Manager</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="team-card team-rotated-2">
-              <a href="#">
-                <img src="assets/img/team/team-img12.jpg" alt="Images" />
-              </a>
-              <div className="content">
-                <h3>
-                  <a href="team.html">Julfiker Jeain</a>
-                </h3>
-                <span>CEO At Ostino</span>
-                <ul className="social-link">
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-facebook" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-twitter" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-pinterest-alt" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank">
-                      <i className="bx bxl-youtube" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="team-two-shape">
-          <div className="shape1">
-            <img src="assets/img/shape/shape13.png" alt="Images" />
-          </div>
-          <div className="shape2">
-            <img src="assets/img/shape/shape11.png" alt="Images" />
-          </div>
-          <div className="shape3">
-            <img src="assets/img/shape/shape10.png" alt="Images" />
-          </div>
-          <div className="shape4">
-            <img src="assets/img/shape/shape9.png" alt="Images" />
-          </div>
-          <div className="shape5">
-            <img src="assets/img/shape/shape12.png" alt="Images" />
-          </div>
-          <div className="shape6">
-            <img src="assets/img/shape/shape7.png" alt="Images" />
-          </div>
-          <div className="shape7">
-            <img src="assets/img/shape/shape14.png" alt="Images" />
-          </div>
-        </div>
-      </div>
-      {/* Team Area Two End */}
       
       {/* Testimonial Area */}
       <Testimonial />

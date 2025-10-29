@@ -85,12 +85,12 @@ export default function FieldTrackingPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/field-tracking.jpg" alt="Field Tracking Solutions" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Monitor Your Field Force in Real-Time and Boost Productivity</h2>
                   <p>Managing a field force can be challenging. Our GPS-based field tracking solution is designed to help you overcome these challenges by providing real-time visibility into the location and activities of your field employees. With our solution, you can improve productivity, enhance customer service, and gain better control over your field operations.</p>
@@ -145,9 +145,9 @@ export default function FieldTrackingPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

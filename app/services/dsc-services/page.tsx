@@ -75,12 +75,12 @@ export default function DscServicesPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/dsc-services.jpg" alt="DSC Services" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Secure Your Online Transactions with a Digital Signature Certificate</h2>
                   <p>In the age of digital transformation, a Digital Signature Certificate (DSC) is an essential tool for ensuring the security and authenticity of your online transactions. A DSC is the digital equivalent of a physical signature and is used to sign electronic documents, authenticate your identity, and ensure that the data is not tampered with.</p>
@@ -137,9 +137,9 @@ export default function DscServicesPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

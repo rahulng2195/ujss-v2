@@ -108,12 +108,12 @@ export default function DedicatedCloudServerPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/dedicated-server.jpg" alt="Tally on Dedicated Server" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>The Ultimate Tally Experience with Your Own Private Server</h2>
                   <p>Elevate your business operations with a dedicated cloud server for Tally. This premium solution offers an isolated, high-speed, and fully customizable environment, giving you unparalleled control and performance without compromise.</p>
@@ -241,9 +241,9 @@ export default function DedicatedCloudServerPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

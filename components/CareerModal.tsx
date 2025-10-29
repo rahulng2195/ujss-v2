@@ -22,6 +22,14 @@ export default function CareerModal({ isOpen, onClose, jobTitle }: CareerModalPr
 
   const [fileName, setFileName] = useState('');
 
+  const [status, setStatus] = useState<{
+    type: 'idle' | 'loading' | 'success' | 'error';
+    message: string;
+  }>({
+    type: 'idle',
+    message: ''
+  });
+
   useEffect(() => {
     if (jobTitle) {
       setFormData(prev => ({ ...prev, position: jobTitle }));
@@ -58,25 +66,59 @@ export default function CareerModal({ isOpen, onClose, jobTitle }: CareerModalPr
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you can add your form submission logic (API call, etc.)
-    console.log('Career application submitted:', formData);
-    alert('Thank you for your application! We will review it and get back to you soon.');
+    setStatus({ type: 'loading', message: 'Submitting application...' });
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      position: jobTitle || '',
-      experience: '',
-      currentCompany: '',
-      resume: null,
-      coverLetter: ''
-    });
-    setFileName('');
-    onClose();
+    try {
+      // Create FormData for file upload
+      const submitData = new FormData();
+      submitData.append('name', formData.name);
+      submitData.append('email', formData.email);
+      submitData.append('phone', formData.phone);
+      submitData.append('position', formData.position);
+      submitData.append('experience', formData.experience);
+      submitData.append('currentCompany', formData.currentCompany);
+      submitData.append('coverLetter', formData.coverLetter);
+
+      if (formData.resume) {
+        submitData.append('resume', formData.resume);
+      }
+
+      const response = await fetch('/api/career', {
+        method: 'POST',
+        body: submitData,
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: data.message });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          position: jobTitle || '',
+          experience: '',
+          currentCompany: '',
+          resume: null,
+          coverLetter: ''
+        });
+        setFileName('');
+
+        // Close modal after 2 seconds
+        setTimeout(() => {
+          onClose();
+          setStatus({ type: 'idle', message: '' });
+        }, 2000);
+      } else {
+        setStatus({ type: 'error', message: data.message });
+      }
+    } catch (error) {
+      setStatus({ type: 'error', message: 'Failed to submit application. Please try again.' });
+    }
   };
 
   if (!isOpen) return null;
@@ -226,10 +268,31 @@ export default function CareerModal({ isOpen, onClose, jobTitle }: CareerModalPr
             ></textarea>
           </div>
 
-          <button type="submit" className="default-btn career-submit-btn">
-            Submit Application
+          <button
+            type="submit"
+            className="default-btn career-submit-btn"
+            disabled={status.type === 'loading'}
+          >
+            {status.type === 'loading' ? 'Submitting...' : 'Submit Application'}
             <i className='bx bx-right-arrow-alt'></i>
           </button>
+
+          {status.message && (
+            <div
+              className={`alert ${status.type === 'success' ? 'alert-success' : 'alert-danger'} mt-3`}
+              style={{
+                padding: '12px 15px',
+                borderRadius: '8px',
+                marginTop: '15px',
+                backgroundColor: status.type === 'success' ? '#d4edda' : '#f8d7da',
+                color: status.type === 'success' ? '#155724' : '#721c24',
+                border: `1px solid ${status.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`,
+                fontSize: '14px'
+              }}
+            >
+              {status.message}
+            </div>
+          )}
         </form>
       </div>
     </div>

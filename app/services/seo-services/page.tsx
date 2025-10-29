@@ -92,12 +92,12 @@ export default function SEOServicesPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/seo-services.jpg" alt="SEO Services" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Rank Higher. Get Noticed. Grow Faster.</h2>
                   <p>Your website deserves to be seen! At UJSS Services, we help your business climb to the top of Google search results with smart SEO strategies that attract the right audience and turn clicks into customers.</p>
@@ -303,9 +303,9 @@ export default function SEOServicesPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -114,12 +114,12 @@ export default function TallyAddonsPluginsPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/tally-addons.jpg" alt="Tally Addons & Plugins" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Enhance the Power of TallyPrime with Custom Addons</h2>
                   <p>Take your TallyPrime to the next level with our powerful and easy-to-use addons and plugins. Designed to enhance functionality and streamline your workflows, our Tally addons help you automate tasks, get deeper business insights, and integrate with the tools you use every day.</p>
@@ -242,9 +242,9 @@ export default function TallyAddonsPluginsPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

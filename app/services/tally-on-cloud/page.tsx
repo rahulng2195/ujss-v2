@@ -107,11 +107,11 @@ export default function TallyOnCloudPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/tally-on-cloud.jpg" alt="Tally on Cloud" />
-                </div>
+                </div> */}
                 
                 <div className="service-article-content">
                   <h2>Experience Tally on Cloud — Anytime, Anywhere!</h2>
@@ -295,9 +295,9 @@ export default function TallyOnCloudPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

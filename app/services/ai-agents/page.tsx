@@ -76,11 +76,11 @@ export default function AIAgentsPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/ai-agents.jpg" alt="AI Agents" />
-                </div>
+                </div> */}
                 
                 <div className="service-article-content">
                   <h2>Your 24/7 Digital Employee is Here</h2>
@@ -186,9 +186,9 @@ export default function AIAgentsPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

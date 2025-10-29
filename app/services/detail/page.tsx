@@ -33,11 +33,11 @@ export default function ServiceDetailPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <Image src="/assets/img/service/service-details.jpg" alt="Service" width={800} height={500} unoptimized />
-                </div>
+                </div> */}
 
                 <div className="service-article-content">
                   <h2>Consumer Analytics</h2>
@@ -86,51 +86,6 @@ export default function ServiceDetailPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
-              <div className="service-sidebar">
-                <div className="service-list">
-                  <h3>All Services</h3>
-                  <ul>
-                    <li><Link href="/services/detail" className="active">Consumer Analytics</Link></li>
-                    <li><Link href="/services/detail">Marketing Analytics</Link></li>
-                    <li><Link href="/services/detail">Sales Analytics</Link></li>
-                    <li><Link href="/services/detail">Risk Analytics</Link></li>
-                    <li><Link href="/services/detail">Business Analytics</Link></li>
-                    <li><Link href="/services/detail">Social Media Analytics</Link></li>
-                  </ul>
-                </div>
-
-                <div className="service-contact">
-                  <h3>Contact Info</h3>
-                  <ul>
-                    <li>
-                      <i className='flaticon-telephone'></i>
-                      <a href="tel:+4498886660000">+449 888 666 0000</a>
-                    </li>
-                    <li>
-                      <i className='flaticon-email-1'></i>
-                      <a href="mailto:hello@UJSS.com">hello@UJSS.com</a>
-                    </li>
-                    <li>
-                      <i className='flaticon-place'></i>
-                      855 road, brooklyn street new york 600
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="service-download">
-                  <h3>Download</h3>
-                  <a href="#" className="download-btn">
-                    <i className='bx bxs-file-pdf'></i>
-                    Service Brochure
-                  </a>
-                  <a href="#" className="download-btn">
-                    <i className='bx bxs-file-doc'></i>
-                    Company Profile
-                  </a>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

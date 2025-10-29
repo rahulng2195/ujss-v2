@@ -91,12 +91,12 @@ export default function LicenseRegistrationPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/license-registration.jpg" alt="License Registration" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Ensure Your Business is Fully Compliant with Our License Registration Services</h2>
                   <p>Running a business involves complying with various laws and regulations, which includes obtaining the necessary licenses and registrations. Our business license registration services are designed to help you navigate this complex process and ensure your business is fully compliant.</p>
@@ -153,9 +153,9 @@ export default function LicenseRegistrationPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

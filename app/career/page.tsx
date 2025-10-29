@@ -215,7 +215,7 @@ export default function CareerPage() {
       </div>
 
       {/* CTA Section */}
-      <div className="newsletter-area pb-100">
+      {/* <div className="newsletter-area pb-100">
         <div className="container">
           <div className="newsletter-wrap">
             <div className="row align-items-center">
@@ -243,7 +243,7 @@ export default function CareerPage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <CareerModal 
         isOpen={isModalOpen} 

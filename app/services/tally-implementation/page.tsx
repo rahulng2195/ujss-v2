@@ -102,12 +102,12 @@ export default function TallyImplementationPage() {
       <div className="service-details-area pt-100 pb-70">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-12">
               <div className="service-article">
-                <div className="service-article-img">
+                {/* <div className="service-article-img">
                   <img src="/assets/img/service/tally-implementation.jpg" alt="Tally Implementation" />
-                </div>
-                
+                </div> */}
+
                 <div className="service-article-content">
                   <h2>Professional Tally Implementation for a Seamless Transition</h2>
                   <p>A successful Tally implementation is more than just installing software. It’s about understanding your business, configuring the software to your needs, and ensuring your team is ready to use it effectively. At UJSS, our team of Tally experts provides end-to-end implementation services to ensure a seamless and successful transition to Tally.</p>
@@ -165,9 +165,9 @@ export default function TallyImplementationPage() {
               </div>
             </div>
 
-            <div className="col-lg-4">
+            {/* <div className="col-lg-4">
               <ServiceSidebar />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
