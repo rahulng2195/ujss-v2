@@ -37,14 +37,37 @@ export default function CareerModal({ isOpen, onClose, jobTitle }: CareerModalPr
   }, [jobTitle]);
 
   useEffect(() => {
+    let scrollPosition = 0;
+
     if (isOpen) {
+      // Save current scroll position
+      scrollPosition = window.scrollY;
+
+      // Store scroll position in a data attribute
+      document.body.setAttribute('data-scroll-position', scrollPosition.toString());
+
+      // Lock scroll using CSS class
+      document.body.style.top = `-${scrollPosition}px`;
       document.body.classList.add('modal-open');
     } else {
+      // Get stored scroll position
+      const savedPosition = document.body.getAttribute('data-scroll-position');
+
+      // Remove modal styles
       document.body.classList.remove('modal-open');
+      document.body.style.top = '';
+      document.body.removeAttribute('data-scroll-position');
+
+      // Restore scroll position
+      if (savedPosition) {
+        window.scrollTo(0, parseInt(savedPosition));
+      }
     }
 
     return () => {
       document.body.classList.remove('modal-open');
+      document.body.style.top = '';
+      document.body.removeAttribute('data-scroll-position');
     };
   }, [isOpen]);
 
