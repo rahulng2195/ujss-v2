@@ -83,13 +83,13 @@ export default function Navbar() {
                     </div>
                   </div> */}
 
-                  <div className="side-item">
+                  {/* <div className="side-item">
                     <div className="user-btn">
                       <a href="#">
                         <i className='flaticon-contact'></i>
                       </a>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="side-item">
                     <div className="nav-add-btn">

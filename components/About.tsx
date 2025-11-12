@@ -31,10 +31,8 @@ export default function About() {
                   <h2>Empowering Businesses with Cloud & Tally Excellence</h2>
                 </div>
                 <h3>Your Trusted Technology Partner for Digital Transformation</h3>
-                <p className='pb-1'>We provide modern cloud solutions designed to boost performance and efficiency.
-                  By combining innovation with reliability, UJSS empowers digital transformation.
-                  Our goal is simple help businesses grow with confi dence</p>
-                <p>We combine innovation, reliability, and 24/7 support to ensure your business runs without limits. Whether you&apos;re a startup chasing growth or an enterprise optimizing efficiency, we are your trusted technology partner.</p>
+                <p className='pb-1'>We provide modern cloud solutions designed to boost performance and efficiency. By combining innovation with reliability, UJSS empowers digital transformation. Our goal is simple to help businesses grow with confi dence.</p>
+                <p>We combine innovation, reliability and 24/7 support to ensure your business runs without limits. Whether you're a startup chasing growth or an enterprise optimizing efficiency, we are your trusted technology partner.</p>
 
                 <div className="row">
                   {features.map((feature, index) => (

@@ -11,21 +11,21 @@ const Testimonial = () => {
 
   const testimonials = [
     {
-      text: "We're very happy with UJ software and service. It's easy to use, fast, and reliable. The support team (Vandan) is quick to help. We've had zero downtime and no major issues so far. Definitely a service we trust and recommend.",
+      text: "We're very happy with uj software and service . It's easy to use, fast, and reliable. the support team is quick to help. We've had zero downtime and no major issues so far. Defi nitely a service we trust and recommend.",
       name: "AMERICO ACCOUNT",
       position: "Business Owner",
       image: "/assets/img/testimonial/men-avatar.png",
       rating: 5
     },
     {
-      text: "I had a great experience working with UJ Software and Solutions. The team is very professional and skilled, and they provided a customized software solution that perfectly suited our business needs. Their customer support is excellent, always available to assist with any issues or questions.",
+      text: "I had a great experience working with UJ Software and Solutions. The team is very professional and skilled, and they provided a customized software solution that perfectly suited our business needs. Their customer support is excellent.",
       name: "Shahrukh Shaikh",
       position: "Business Owner",
       image: "/assets/img/testimonial/men-avatar.png",
       rating: 5
     },
     {
-      text: "I had a very positive experience with U J Software & Solution. Their team is professional, responsive, and highly skilled in delivering quality software solutions. They understood my requirements clearly and provided effective guidance throughout the process.",
+      text: "I had a very positive experience with U J Software & Solution. Their team is professional, responsive, and highly skilled in delivering quality software solutions. They understood my requirements clearly and provided effective guidance throughout the process. The service was timely, reliable, and exceeded my expectations.",
       name: "Yahiya Choudhary",
       position: "Business Client",
       image: "/assets/img/testimonial/men-avatar.png",
@@ -182,6 +182,7 @@ const Testimonial = () => {
                 <p className="testimonial-text">"{testimonial.text}"</p>
                 <div className="testimonial-author">
                   <h3>{testimonial.name}</h3>
+                  <h3>{testimonial.position}</h3>
                 </div>
               </div>
             ))}

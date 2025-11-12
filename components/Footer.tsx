@@ -78,7 +78,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <i className='flaticon-email-1'></i>
-                    <a href="mailto:contact@ujss.in">contact@ujss.in</a>
+                    <a href="mailto:enquiry@ujss.in">enquiry@ujss.in</a>
                   </li>
                   <li>
                     <i className='flaticon-place'></i>

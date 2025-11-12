@@ -52,7 +52,7 @@ export default function AboutPage() {
                   <h2>Empowering Your Digital Transformation</h2>
                 </div>
                 <h3>
-                  We are a team of passionate experts dedicated to helping businesses thrive in the digital age. Our strategy is built on a foundation of innovation, collaboration, and a deep understanding of our clients' needs.
+                  We are a team of passionate experts dedicated to helping businesses thrive in the digital age. Our strategy is built on a foundation of innovation, collaboration and a deep understanding of our client's need.
                 </h3>
                 {/* <p>
                   At UJSS, we provide cutting-edge solutions in cloud computing, custom software development, data security, and digital marketing. We believe in building strong partnerships with our clients, working together to achieve their goals and drive growth.
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <div className="service-list-content">
                 <h3>Our History</h3>
                 <p>
-                  Founded with a vision to provide exceptional IT services, UJSS has grown from a small startup to a leading provider of digital solutions. Our journey is a testament to our commitment to innovation and excellence.
+                  Founded with a vision to provide exceptional IT services, UJSS has grown from a small startup to a lead provider of digital solutions. Our journey is a testament to our commitment to innovation and excellence.
                 </p>
                 <ul>
                   <li>
@@ -143,7 +143,7 @@ export default function AboutPage() {
               <div className="service-list-content">
                 <h3>Who We Are</h3>
                 <p>
-                  We are a team of strategists, designers, and developers who are passionate about technology and its potential to revolutionize businesses. We specialize in a wide range of services, from cloud computing to digital marketing.
+                  We are a team of strategists, designers and developers who are passionate about technology and its potential to revolutionize businesses. We specialize in a wide range of services, from cloud computing to digital marketing.
                 </p>
                 <ul>
                   <li>
@@ -169,7 +169,7 @@ export default function AboutPage() {
               <div className="service-list-content">
                 <h3>Our Mission</h3>
                 <p>
-                  Our mission is to empower businesses with transformative digital solutions that drive growth, efficiency, and success. We are dedicated to providing innovative and reliable services that exceed our clients' expectations.
+                  Our mission is to empower businesses with transformative digital solutions that drive growth, efficiency and success. We are dedicated to providing innovative and reliable services that exceed our client’s expectations.
                 </p>
                 <ul>
                   <li>

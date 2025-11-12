@@ -9,19 +9,19 @@ export default function Services() {
       title: 'Smart Tally Operations',
       slug: 'tally-solutions',
       icon: '/assets/img/service/service-icon7.png',
-      description: 'Comprehensive Tally software sales, implementation, customization, and expert support services to streamline your accounting and business operations.'
+      description: 'Comprehensive Tally software sales, implementation, customization and expert support services to streamline your accounting and business operations.'
     },
     {
       title: 'Digital Marketing',
       slug: 'digital-marketing',
       icon: '/assets/img/service/service-icon8.png',
-      description: 'Strategic SEO, social media marketing, content marketing, and digital advertising solutions to boost your online presence and drive business growth.'
+      description: 'Strategic SEO, social media marketing, content marketing and digital advertising solutions to boost your online presence and drive business growth.'
     },
     {
       title: 'AI Agents',
       slug: 'ai-agents',
       icon: '/assets/img/service/service-icon9.png',
-      description: 'Intelligent AI-powered agents that automate tasks, analyze data, and deliver actionable business insights to enhance operational efficiency.',
+      description: 'Intelligent AI-powered agents that automate tasks, analyze data and deliver actionable business insights to enhance operational efficiency.',
       badge: 'New'
     }
   ];

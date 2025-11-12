@@ -19,7 +19,7 @@ export default function ProcessFlow() {
                       <span>1</span> Discovery & Strategy 
                     </h3>
                     <p>
-                      We begin by understanding your business, goals, and challenges to develop a comprehensive strategy.
+                      We start by understanding your business, goals and challenges to develop a comprehensive and effective strategy.
                     </p>
                   </li>
                   <li className="text-right">
@@ -27,7 +27,7 @@ export default function ProcessFlow() {
                      <span>2</span> Design & Development 
                     </h3>
                     <p>
-                      Our team designs and develops custom solutions tailored to your specific needs and requirements.
+                      Our team designs and develops customized solutions tailored to your specifi c needs and requirements.
                     </p>
                   </li>
                   <li className="text-right">
@@ -35,7 +35,7 @@ export default function ProcessFlow() {
                      <span>3</span> Testing & Quality Assurance 
                     </h3>
                     <p>
-                      We conduct rigorous testing to ensure your solution is robust, reliable, and ready for deployment.
+                      We conduct rigorous testing to ensure your solution is robust, reliable and ready for deployment.
                     </p>
                   </li>
                 </ul>
@@ -54,7 +54,7 @@ export default function ProcessFlow() {
                       <span>4</span> Deployment & Integration
                     </h3>
                     <p>
-                      We deploy your solution and integrate it seamlessly with your existing systems and workflows.
+                      We deploy your solution and integrate it seamlessly with your existing systems and workfl ows.
                     </p>
                   </li>
                   <li>
@@ -62,7 +62,7 @@ export default function ProcessFlow() {
                       <span>5</span>Training & Support
                     </h3>
                     <p>
-                      We provide comprehensive training and ongoing support to ensure a smooth transition and continued success.
+                      We provide comprehensive training and ongoing support to ensure a smooth transition and long-term success.
                     </p>
                   </li>
                   <li>
@@ -70,7 +70,7 @@ export default function ProcessFlow() {
                       <span>6</span>Optimization & Growth
                     </h3>
                     <p>
-                      We continuously monitor, analyze, and optimize your solution to drive growth and achieve your business objectives.
+                     We continuously monitor, analyze, and optimize your solution to drive growth and help you achieve your business goals.
                     </p>
                   </li>
                 </ul>

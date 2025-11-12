@@ -60,7 +60,7 @@ export default function ContactPage() {
                 <div className="contact-card">
                   <i className="flaticon-email" />
                   <h3>Contact</h3>
-                  <p>contact@ujss.in </p>
+                  <p>enquiry@ujss.in </p>
                   <p> Mobile: +91 91674 23035 </p>
                   <a href="#" className="contact-card-btn">
                     Learn More
