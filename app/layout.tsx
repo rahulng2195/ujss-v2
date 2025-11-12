@@ -42,7 +42,7 @@ export default function RootLayout({
         <Script src="/assets/js/wow.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/owl.carousel.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
-        <Script src="/assets/js/meanmenu.js" strategy="afterInteractive" />
+        <Script src="/assets/js/meanmenu.js" strategy="beforeInteractive" />
         <Script src="/assets/js/jquery.ajaxchimp.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/form-validator.min.js" strategy="afterInteractive" />
         <Script src="/assets/js/contact-form-script.js" strategy="afterInteractive" />
