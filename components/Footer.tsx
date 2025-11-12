@@ -21,20 +21,20 @@ export default function Footer() {
                 <div className="footer-social-icon">
                   <ul className="social-link">
                     <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer"><i className='bx bxl-facebook'></i></a>
+                      <a href="https://www.facebook.com/ujsoftwaresolutions/?ref=_xav_ig_profile_page_web" target="_blank" rel="noopener noreferrer"><i className='bx bxl-facebook'></i></a>
                     </li> 
-                    <li>
+                    {/* <li>
                       <a href="#" target="_blank" rel="noopener noreferrer"><i className='bx bxl-twitter'></i></a>
+                    </li>  */}
+                    <li>
+                      <a href="https://www.instagram.com/ujsoftware?igsh=MWdzdnl5NzBocDI3eg==" target="_blank" rel="noopener noreferrer"><i className='bx bxl-instagram'></i></a>
                     </li> 
                     <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer"><i className='bx bxl-instagram'></i></a>
+                      <a href="https://www.linkedin.com/in/anita-jaiswal-551968a1" target="_blank" rel="noopener noreferrer"><i className='bx bxl-linkedin'></i></a>
                     </li> 
-                    <li>
-                      <a href="#" target="_blank" rel="noopener noreferrer"><i className='bx bxl-pinterest-alt'></i></a>
-                    </li> 
-                    <li>
+                    {/* <li>
                       <a href="#" target="_blank" rel="noopener noreferrer"><i className='bx bxl-youtube'></i></a>
-                    </li> 
+                    </li>  */}
                   </ul>
                 </div>
               </div>
