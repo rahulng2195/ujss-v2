@@ -2,16 +2,31 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect } from 'react';
+
+declare global {
+    interface Window {
+        $: any;
+        jQuery: any;
+    }
+}
 
 export default function Navbar() {
+    useEffect(() => {
+        if (window.jQuery) {
+            window.jQuery('.mean-menu').meanmenu({
+                meanScreenWidth: "991"
+            });
+        }
+    }, []);
   return (
     <>
       <div className="navbar-area">
         {/* Menu For Mobile Device */}
         <div className="mobile-nav">
           <Link href="/" className="logo">
-            <Image src="/assets/img/ujsswhiteLogo.png" className="logo-one" alt="Logo" width={140} height={75} />
-            <Image src="/assets/img/ujsswhiteLogo.png" className="logo-two" alt="Logo" width={140} height={75} />
+            <Image src="/assets/img/ujss logo.png" className="logo-one" alt="Logo" width={150} height={80} />
+            <Image src="/assets/img/ujsswhiteLogo.png" className="logo-two" alt="Logo" width={150} height={80} />
           </Link>
         </div>
 
@@ -20,7 +35,7 @@ export default function Navbar() {
           <div className="container-fluid">
             <nav className="container-max-2 navbar navbar-expand-md navbar-light">
               <Link className="navbar-brand" href="/">
-                <Image src="/assets/img/ujsswhiteLogo.png" alt="Logo" width={140} height={75} />
+                <Image src="/assets/img/ujss logo.png" alt="Logo" width={150} height={80} />
               </Link>
 
               <div className="collapse navbar-collapse mean-menu" id="navbarSupportedContent">

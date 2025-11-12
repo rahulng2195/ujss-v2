@@ -1,10 +1,7 @@
 (function($) {
     'use strict';
 
-    // Mean Menu JS
-    jQuery('.mean-menu').meanmenu({ 
-        meanScreenWidth: "991"
-    });
+    // Mean Menu JS (now initialized in Navbar.tsx)
 
     // Navbar Area
     $(window).on('scroll', function() {

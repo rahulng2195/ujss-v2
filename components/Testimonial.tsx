@@ -1,9 +1,14 @@
 'use client';
-
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useEffect } from 'react';
 
-export default function Testimonial() {
+const Testimonial = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const testimonials = [
     {
       text: "We're very happy with UJ software and service. It's easy to use, fast, and reliable. The support team (Vandan) is quick to help. We've had zero downtime and no major issues so far. Definitely a service we trust and recommend.",
@@ -120,115 +125,72 @@ export default function Testimonial() {
   ];
 
   useEffect(() => {
-    // Initialize Owl Carousel for testimonials
-    if (typeof window !== 'undefined' && (window as any).$) {
+    if (isClient && typeof window !== 'undefined' && (window as any).$) {
       const $ = (window as any).$;
-      
-      // Destroy existing carousel if it exists
-      if ($('.testimonial-slider').hasClass('owl-loaded')) {
-        $('.testimonial-slider').trigger('destroy.owl.carousel');
-        $('.testimonial-slider').removeClass('owl-loaded owl-drag');
-      }
+      const slider = $('.testimonial-slider-three');
 
-      // Initialize the carousel
-      setTimeout(() => {
-        $('.testimonial-slider').owlCarousel({
+      if (slider.length && slider.owlCarousel) {
+        if (slider.hasClass('owl-loaded')) {
+          slider.trigger('destroy.owl.carousel');
+        }
+        
+        slider.owlCarousel({
           loop: true,
-          margin: 30,
-          nav: true,
-          dots: true,
+          margin: 20,
+          nav: false,
+          dots: false,
           autoplay: true,
           autoplayTimeout: 5000,
           autoplayHoverPause: true,
-          navText: [
-            "<i class='bx bx-chevron-left'></i>",
-            "<i class='bx bx-chevron-right'></i>"
-          ],
           responsive: {
             0: {
               items: 1
             },
             768: {
-              items: 1
+              items: 2
             },
-            1024: {
-              items: 1
+            1200: {
+              items: 4
             }
           }
         });
-      }, 100);
-    }
-
-    // Cleanup function
-    return () => {
-      if (typeof window !== 'undefined' && (window as any).$) {
-        const $ = (window as any).$;
-        if ($('.testimonial-slider').hasClass('owl-loaded')) {
-          $('.testimonial-slider').trigger('destroy.owl.carousel');
-        }
       }
-    };
-  }, []);
+    }
+  }, [isClient]);
 
   return (
-    <div className="testimonial-area testimonial-area-mb ptb-100">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="testimonial-list">
-                <div className="list-img-1">
-                  <Image src="./assets/img/testimonial/men-avatar.png" className="img-fluid" height={70} width={60} alt="Happy Client" />
-                </div>
-                <div className="list-img-2">
-                  <Image src="./assets/img/testimonial/women-avatar.png" className="img-fluid" height={70} width={60} alt="Satisfied Customer" />
-                </div>
-                <div className="list-img-3">
-                  <Image src="./assets/img/testimonial/men-avatar.png" className="img-fluid" height={70} width={60} alt="Client Review" />
-                </div>
-                <div className="list-img-4">
-                  <Image src="./assets/img/testimonial/women-avatar.png" className="img-fluid" height={70} width={60} alt="Customer Testimonial" />
-                </div>
-                <div className="list-img-5">
-                  <Image src="./assets/img/testimonial/men-avatar.png" className="img-fluid" height={70} width={60} alt="Client Feedback" />
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="testimonial-title">
-                <span className="sp-before sp-after">Our Happy Clients</span>
-                <h2>Trusted The Impact We Create</h2>
-                {/* <p className="mt-3">Real experiences from businesses we've helped grow with our solutions</p> */}
-              </div>
-              <div className="testimonial-slider owl-carousel owl-theme">
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="testimonial-item">
-                    <div className="rating mb-3">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <i key={i} className='bx bxs-star'></i>
-                      ))}
-                    </div>
-                    <p>{testimonial.text}</p>
-                    <div className="content">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        style={{ 
-                          width: '60px', 
-                          height: '60px', 
-                          objectFit: 'cover',
-                        }}
-                      />
-                      <div className="content-title">
-                        <h3>{testimonial.name}</h3>
-                        <span>{testimonial.position}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+    <div className="testimonial-area-four ptb-100">
+      <div className="container">
+        <div className="section-title">
+          <span>OUR TESTIMONIAL</span>
+          <h2>What Our Clients Say</h2>
         </div>
+        {isClient && (
+          <div className="testimonial-slider-three owl-carousel owl-theme">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-items">
+                <div className="testimonial-header">
+                  <div className="avatar-container">
+                    <img src={testimonial.image} alt={testimonial.name} className="testimonial-avatar" />
+                  </div>
+                  <div className="testimonial-rating">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="star">★</span>
+                    ))}
+                  </div>
+                </div>
+                <p className="testimonial-text">"{testimonial.text}"</p>
+                <div className="testimonial-author">
+                  <h3>{testimonial.name}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
+    </div>
   );
-}
+};
+
+export default Testimonial;
+

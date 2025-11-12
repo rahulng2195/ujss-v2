@@ -1,3 +1,14 @@
+@media only screen and (max-width: 600px){
+  .banner-img-2{
+    display: none;
+  }
+  .dot-menu{
+    display: none;
+  }
+  .service-list-content{
+    padding: 0px;
+  }
+}
 @media only screen and (max-width: 767px) {
   /* Default CSS */
   body {
@@ -48,9 +59,12 @@
   /* Default CSS End */
   /* Navbar CSS */
   .mobile-nav .logo img {
-    max-width: 110px;
-    height: 40px;
-    margin-top: -5px;
+    max-width: 100px;
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    margin-top: 0;
+    object-fit: contain;
   }
   .mobile-nav .logo .logo-two {
     display: none;
@@ -169,7 +183,7 @@
     padding-bottom: 30px;
   }
   .banner-content-two h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
   .banner-content-two .banner-content-btn {
     margin-top: 30px;
@@ -831,11 +845,11 @@
   }
   .testimonial-text {
     background-image: none;
-    width: 150px;
-    height: 140px;
+    /* width: 150px;
+    height: 140px; */
     background-color: #ffffff;
     box-shadow: 0 0 15px #f1f1f1;
-    border-radius: 50px 30px 50px 20px;
+    /* border-radius: 50px 30px 50px 20px; */
   }
   .testimonial-text h3 {
     font-size: 28px;
@@ -1301,9 +1315,12 @@
   /* Default CSS End */
   /* Navbar CSS */
   .mobile-nav .logo img {
-    max-width: 110px;
-    height: 40px;
-    margin-top: -5px;
+    max-width: 100px;
+    max-height: 50px;
+    height: auto;
+    width: auto;
+    margin-top: 0;
+    object-fit: contain;
   }
   .mobile-nav .logo .logo-two {
     display: none;

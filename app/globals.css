@@ -1,8 +1,16 @@
 /* Add any custom global styles here */
 
+/* Override smooth scroll when modal is open or closing */
+html.modal-scrolling,
+body.modal-scrolling {
+  scroll-behavior: auto !important;
+}
+
 /* Modal scroll lock - prevents page jump when modal opens */
 body.modal-open {
   position: fixed;
   width: 100%;
   overflow: hidden;
+  left: 0;
+  right: 0;
 }

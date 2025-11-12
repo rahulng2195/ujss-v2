@@ -6,47 +6,48 @@ export default function Brands() {
   const brands = [
     {
       name: 'Tally on Cloud',
-      image: '/assets/img/client_logo/tally on cloud.webp'
+      image: '/assets/img/Company logo/a-v-enterprises logo.jpg'
     },
     {
       name: 'Tally Sync',
-      image: '/assets/img/client_logo/Tally sync.png'
+      image: '/assets/img/Company logo/Barrier break  logo.svg'
     },
     {
       name: 'Tally AMC',
-      image: '/assets/img/client_logo/tally amc.webp'
+      image: '/assets/img/Company logo/brewcraft logo.webp'
     },
     {
       name: 'Cloud Admin',
-      image: '/assets/img/client_logo/cloud with admin.jpeg'
+      image: '/assets/img/Company logo/commedialogo.jpg'
     },
     {
       name: 'SEO Services',
-      image: '/assets/img/client_logo/seo image.png'
+      image: '/assets/img/Company logo/Earthnetic logo.png'
     },
     {
       name: 'Social Media Management',
-      image: '/assets/img/client_logo/smm.png'
+      image: '/assets/img/Company logo/imperial cosmetics.avif'
     },
     {
       name: 'PPC Advertising',
-      image: '/assets/img/client_logo/ppc.png'
+      image: '/assets/img/Company logo/isprava logo.png'
     },
-    {
-      name: 'Digital Signature',
-      image: '/assets/img/client_logo/Digital Signature Certification Essentials.png'
-    },
-    {
-      name: 'GST & Taxation',
-      image: '/assets/img/client_logo/GST & Taxation.png'
-    },
+    
     {
       name: 'Licensed Services',
-      image: '/assets/img/client_logo/Licensed.jpg'
+      image: '/assets/img/Company logo/maharashtra logo.webp'
     },
     {
       name: 'Startup Registration',
-      image: '/assets/img/client_logo/startup.jpg'
+      image: '/assets/img/Company logo/sp electro logo.png'
+    },
+    {
+      name: 'Startup Registration',
+      image: '/assets/img/Company logo/sun impex logo.png'
+    },
+    {
+      name: 'Startup Registration',
+      image: '/assets/img/Company logo/wasan toyota.png'
     }
   ];
 

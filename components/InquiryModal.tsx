@@ -32,38 +32,45 @@ export default function InquiryModal({ isOpen, onClose, serviceName }: InquiryMo
   }, [serviceName]);
 
   useEffect(() => {
-    let scrollPosition = 0;
-
     if (isOpen) {
       // Save current scroll position
-      scrollPosition = window.scrollY;
+      const scrollPosition = window.scrollY;
 
       // Store scroll position in a data attribute
       document.body.setAttribute('data-scroll-position', scrollPosition.toString());
 
+      // Add modal-scrolling class to force auto scroll behavior
+      document.documentElement.classList.add('modal-scrolling');
+      document.body.classList.add('modal-scrolling');
+
       // Lock scroll using CSS class
       document.body.style.top = `-${scrollPosition}px`;
       document.body.classList.add('modal-open');
-    } else {
-      // Get stored scroll position
+    } else if (document.body.classList.contains('modal-open')) {
+      // Get stored scroll position BEFORE removing styles
       const savedPosition = document.body.getAttribute('data-scroll-position');
+      const scrollPos = savedPosition ? parseInt(savedPosition) : 0;
 
-      // Remove modal styles
+      // Ensure modal-scrolling class is active for instant scroll
+      document.documentElement.classList.add('modal-scrolling');
+      document.body.classList.add('modal-scrolling');
+
+      // Remove modal class and styles
       document.body.classList.remove('modal-open');
       document.body.style.top = '';
+
+      // Restore scroll position IMMEDIATELY in the same tick
+      window.scrollTo(0, scrollPos);
+
+      // Clean up
       document.body.removeAttribute('data-scroll-position');
 
-      // Restore scroll position
-      if (savedPosition) {
-        window.scrollTo(0, parseInt(savedPosition));
-      }
+      // Remove modal-scrolling class after scroll is complete
+      setTimeout(() => {
+        document.documentElement.classList.remove('modal-scrolling');
+        document.body.classList.remove('modal-scrolling');
+      }, 100);
     }
-
-    return () => {
-      document.body.classList.remove('modal-open');
-      document.body.style.top = '';
-      document.body.removeAttribute('data-scroll-position');
-    };
   }, [isOpen]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -119,89 +126,97 @@ export default function InquiryModal({ isOpen, onClose, serviceName }: InquiryMo
         <button className="inquiry-modal-close" onClick={onClose}>
           <i className='bx bx-x'></i>
         </button>
-        
+
         <div className="inquiry-modal-header">
           <h3>Get in Touch</h3>
           <p>{serviceName ? `Inquiry for ${serviceName}` : 'Tell us about your requirements'}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="inquiry-modal-form">
-          <div className="form-group">
-            <label htmlFor="name">Full Name *</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="form-control"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              placeholder="Enter your full name"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="email">Email Address *</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="form-control"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              placeholder="Enter your email"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="phone">Phone Number *</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              className="form-control"
-              value={formData.phone}
-              onChange={handleChange}
-              required
-              placeholder="Enter your phone number"
-            />
-          </div>
-
-          {!serviceName && (
-            <div className="form-group">
-              <label htmlFor="service">Service Interest</label>
-              <select
-                id="service"
-                name="service"
-                className="form-control"
-                value={formData.service}
-                onChange={handleChange}
-              >
-                <option value="">Select a service</option>
-                <option value="Tally on Cloud">Tally on Cloud</option>
-                <option value="Tally Implementation">Tally Implementation</option>
-                <option value="Tally AMC & Support">Tally AMC & Support</option>
-                <option value="Digital Marketing">Digital Marketing</option>
-                <option value="Website Development">Website Development</option>
-                <option value="DSC Services">DSC Services</option>
-                <option value="GST & Taxation">GST & Taxation</option>
-                <option value="Other">Other</option>
-              </select>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="form-group">
+                <label htmlFor="name">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="form-control"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your full name"
+                />
+              </div>
             </div>
-          )}
-
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              className="form-control"
-              rows={4}
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Tell us more about your requirements..."
-            ></textarea>
+            <div className="col-md-6">
+              <div className="form-group">
+                <label htmlFor="email">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="form-control"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your email"
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="form-group">
+                <label htmlFor="phone">Phone Number *</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  className="form-control"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  placeholder="Enter your phone number"
+                />
+              </div>
+            </div>
+            <div className="col-md-6">
+              {!serviceName && (
+                <div className="form-group">
+                  <label htmlFor="service">Service Interest</label>
+                  <select
+                    id="service"
+                    name="service"
+                    className="form-control"
+                    value={formData.service}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select a service</option>
+                    <option value="Tally on Cloud">Tally on Cloud</option>
+                    <option value="Tally Implementation">Tally Implementation</option>
+                    <option value="Tally AMC & Support">Tally AMC & Support</option>
+                    <option value="Digital Marketing">Digital Marketing</option>
+                    <option value="Website Development">Website Development</option>
+                    <option value="DSC Services">DSC Services</option>
+                    <option value="GST & Taxation">GST & Taxation</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              )}
+            </div>
+            <div className="col-md-12">
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="form-control"
+                  rows={3}
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Tell us more about your requirements..."
+                ></textarea>
+              </div>
+            </div>
           </div>
 
           <button
